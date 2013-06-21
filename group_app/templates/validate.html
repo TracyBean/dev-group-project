@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <h2>Validate and select marketplaces</h2>
+
+<div class="row">
+    <div class="span6">
+        <form>
+            <fieldset>
+                <label>Image</label>
+                <img src="http://media.tumblr.com/tumblr_m13w8vCxRS1qbc0ku.jpg" height=100px width=100px>
+                <label>Description</label>
+                <input type="text" placeholder="This is my chair."></textarea>
+                <label>Price</label>
+                <input type="text" placeholder="$100.00">
+                <br>
+                <button class="btn btn-primary" type="button">Go Back</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="span4">
+        <label class="checkbox">
+            <input type="checkbox"> eBay
+        </label>
+        <label class="checkbox">
+            <input type="checkbox"> Amazon
+        </label>
+        <label class="checkbox">
+            <input type="checkbox"> Etsy
+        </label>
+        <label class="checkbox">
+            <input type="checkbox"> shopinterest
+        </label>
+        <br>
+        <button class="btn btn-primary" onclick="location.href='/posted/';" type="button">Submit</button>
+    </div>
+</div>
+
+
+{% endblock %}

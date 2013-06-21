@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <h2>Upload a product</h2>
+
+    <form>
+        <fieldset>
+            <legend>All you need is a picture, a description, and a price</legend>
+            <label>Image</label>
+            <input type="text" placeholder="An image">
+            <label>Description</label>
+            <textarea rows="3"></textarea>
+            <label>Price</label>
+            <input type="text" placeholder="$0.00">
+            <br>
+            <button class="btn btn-primary" onclick="location.href='/validate/';" type="button">Submit</button>
+        </fieldset>
+    </form>
+
+{% endblock %}

@@ -10,6 +10,9 @@ from main import Main
 from gallery import Gallery
 from videos import Videos
 from tutorial import Tutorial
+from upload import Upload
+from validate import Validate
+from posted import Posted
 
 app = flask.Flask(__name__)
 app.secret_key = settings.secret_key
@@ -33,6 +36,15 @@ app.add_url_rule('/videos/',
                 methods=['GET'])
 app.add_url_rule('/tutorial/',
                 view_func=Tutorial.as_view('tutorial'),
+                methods=['GET'])
+app.add_url_rule('/upload',
+                view_func=Upload.as_view('upload'),
+                methods=['GET'])
+app.add_url_rule('/upload',
+                view_func=Validate.as_view('validate'),
+                methods=['GET'])
+app.add_url_rule('/upload',
+                view_func=Posted.as_view('posted'),
                 methods=['GET'])
 
 
